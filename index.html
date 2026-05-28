@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bill Tracker</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  input, button { margin: 5px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+  th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>Bill Tracker</h1>
+
+<h2>Add a Bill</h2>
+<input type="text" id="billName" placeholder="Bill Name" />
+<input type="number" id="billAmount" placeholder="Amount" />
+<input type="date" id="billDueDate" />
+<button onclick="addBill()">Add Bill</button>
+
+<h2>Upcoming Bills</h2>
+<table id="billsTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Due Date</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<h2>Summary</h2>
+<p>Total Upcoming Bills: <span id="totalAmount">0</span></p>
+<p>Days Remaining: <span id="daysRemaining">0</span></p>
+<p>Daily Saving Needed: <span id="dailySave">0</span></p>
+
+<script src="app.js"></script>
+
+</body>
+</html>
